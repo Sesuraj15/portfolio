@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initContactForm();
   initScrollReveals();
-  initDoodleCallouts();
 });
 
 /* ==========================================================================
@@ -62,8 +61,9 @@ function initCanvas() {
   let height = (canvas.height = window.innerHeight);
 
   const particles = [];
-  const particleCount = Math.min(Math.floor((width * height) / 14000), 85);
-  let mouse = { x: null, y: null, radius: 140 };
+  const isMobile = width < 768;
+  const particleCount = isMobile ? 22 : Math.min(Math.floor((width * height) / 14000), 75);
+  let mouse = { x: null, y: null, radius: isMobile ? 80 : 140 };
 
   window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
@@ -246,7 +246,7 @@ function initTypewriter() {
    5. 3D CARD TILT & MOUSE PARALLAX
    ========================================================================== */
 function init3DTilt() {
-  const tiltCards = document.querySelectorAll('.tilt-card, .powerhouse-hero-card');
+  const tiltCards = document.querySelectorAll('.tilt-card, .profile-3d-card');
 
   tiltCards.forEach((card) => {
     card.addEventListener('mousemove', (e) => {
@@ -257,10 +257,10 @@ function init3DTilt() {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -8;
-      const rotateY = ((x - centerX) / centerX) * 8;
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
 
-      card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
     });
 
     card.addEventListener('mouseleave', () => {
@@ -321,16 +321,29 @@ function initScrollSpyAndNav() {
 
   // Mobile Menu Toggle
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      mobileToggle.classList.toggle('open');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.toggle('active');
+      mobileToggle.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     });
 
     // Close menu when clicking link
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        mobileToggle.classList.remove('open');
+        document.body.style.overflow = 'auto';
       });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        mobileToggle.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      }
     });
   }
 
@@ -727,30 +740,7 @@ function initScrollReveals() {
 }
 
 /* ==========================================================================
-   14. POWERHOUSE DOODLE CALLOUT INTERACTION
-   ========================================================================== */
-function initDoodleCallouts() {
-  const callouts = document.querySelectorAll('.doodle-callout');
-  const hotspotData = {
-    camera: '📸 Content Shoots: 850K+ organic video views across short-form campaigns!',
-    meta: '📱 Meta Ads: 3.8x ROAS with precision demographic segmentation!',
-    deck: '🎛️ Video Editing & Custom Apps: Adobe Premiere Pro, CapCut & Full-Stack CRMs!',
-    google: '📊 Google Ads & Trend Research: High-ticket Search, Shopping & PPC conversions!',
-    seo: '📈 SEO Growth: 45+ Keywords ranked in Top 3 SERPs & Core Web Vitals 100/100!',
-    notes: '📝 Growth Strategy: 100+ projects delivered with 100% on-time milestone success!'
-  };
-
-  callouts.forEach((callout) => {
-    callout.addEventListener('click', () => {
-      const key = callout.getAttribute('data-hotspot');
-      const msg = hotspotData[key] || 'Sesuraj A — 1-Person Digital Powerhouse';
-      showToast(msg);
-    });
-  });
-}
-
-/* ==========================================================================
-   15. TOAST NOTIFICATION HELPER
+   13. TOAST NOTIFICATION HELPER
    ========================================================================== */
 function showToast(message, type = 'success') {
   const toast = document.getElementById('toastNotification');
