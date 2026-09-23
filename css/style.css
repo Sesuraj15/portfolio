@@ -98,6 +98,11 @@ body {
   min-height: 100vh;
 }
 
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 ::selection {
   background: var(--accent-violet);
   color: #ffffff;
@@ -260,6 +265,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   max-width: 680px;
   margin: 12px auto 0;
+  text-align: center;
 }
 
 .section-line {
@@ -729,6 +735,9 @@ button, .btn {
   color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .hero-bio strong {
@@ -1108,6 +1117,8 @@ button, .btn {
   font-size: 0.95rem;
   color: var(--text-secondary);
   max-width: 540px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .spotlight-right {
@@ -1147,6 +1158,9 @@ button, .btn {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .about-credentials-list {
@@ -1223,6 +1237,8 @@ button, .btn {
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* 4-Step Methodology */
@@ -1284,6 +1300,8 @@ button, .btn {
   font-size: 0.85rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* --- 8. SKILLS SECTION --- */
@@ -1594,6 +1612,8 @@ button, .btn {
   line-height: 1.6;
   margin-bottom: 18px;
   flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .project-results {
@@ -1645,6 +1665,8 @@ button, .btn {
 .cta-text p {
   font-size: 0.95rem;
   color: var(--text-secondary);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .btn-drive-cta {
@@ -1950,6 +1972,8 @@ button, .btn {
   line-height: 1.6;
   margin-bottom: 16px;
   font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .timeline-action-row {
@@ -1996,6 +2020,11 @@ button, .btn {
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.65;
+}
+
+.timeline-bullets li {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .timeline-item.left .timeline-bullets li {
