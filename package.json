@@ -1,0 +1,19 @@
+{
+  "name": "sesuraj-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sesuraj A - Full-Stack Developer & Digital Marketing Manager Portfolio",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "digital-marketing",
+    "karur",
+    "seo"
+  ],
+  "author": "Sesuraj A",
+  "license": "MIT"
+}
