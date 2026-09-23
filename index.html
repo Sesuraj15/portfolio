@@ -20,7 +20,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -153,52 +153,98 @@
           </div>
         </div>
 
-        <!-- 3D Interactive Profile Avatar Card -->
+        <!-- Powerhouse Interactive Multi-Role Visual -->
         <div class="hero-visual" data-reveal="fade-left">
-          <div class="profile-3d-card" id="profileCard">
+          <div class="powerhouse-hero-card" id="powerhouseCard">
             <div class="card-glow-ring"></div>
-            <div class="card-inner">
-              <div class="photo-wrapper">
-                <img src="assets/sesuraj-photo.png" alt="Sesuraj A - Full Stack Developer & Digital Marketer" class="profile-img">
-                <div class="status-chip">
-                  <i class="fa-solid fa-circle-check"></i> BCA • Digital Architect
+            
+            <!-- Top Hook Headline Banner -->
+            <div class="powerhouse-top-hook">
+              <span class="hook-icon">⚡</span>
+              <span class="hook-text">WHEN YOU'RE THE DEVELOPER, DESIGNER & MARKETER...</span>
+            </div>
+
+            <div class="powerhouse-image-frame">
+              <img src="assets/sesuraj_powerhouse_hero.jpg" alt="Sesuraj A - Full-Stack Developer, Marketer & Strategist" class="powerhouse-img" id="powerhouseImg">
+              
+              <!-- Hotspot Callouts & Doodles around the frame -->
+
+              <!-- 1. Top Left: Content Shoots -->
+              <div class="doodle-callout top-left" data-hotspot="camera">
+                <div class="callout-pill">
+                  <span class="doodle-pin">📸</span>
+                  <span class="doodle-text">content shoots & reels</span>
+                </div>
+                <svg class="doodle-arrow arrow-tl" viewBox="0 0 40 40" fill="none">
+                  <path d="M5 5 C 15 25, 25 30, 35 35" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+                  <path d="M30 35 L 36 35 L 35 29" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <!-- 2. Mid Left: Ad Strategy & Meta -->
+              <div class="doodle-callout mid-left" data-hotspot="meta">
+                <div class="callout-pill">
+                  <span class="doodle-pin">📱</span>
+                  <span class="doodle-text">ad strategy & meta ads</span>
+                </div>
+                <svg class="doodle-arrow arrow-ml" viewBox="0 0 40 30" fill="none">
+                  <path d="M5 25 C 20 22, 28 15, 36 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+                  <path d="M30 6 L 37 7 L 35 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <!-- 3. Bottom Left: Video Grading & Dev -->
+              <div class="doodle-callout bottom-left" data-hotspot="deck">
+                <div class="callout-pill">
+                  <span class="doodle-pin">🎛️</span>
+                  <span class="doodle-text">video grading & custom apps</span>
+                </div>
+                <svg class="doodle-arrow arrow-bl" viewBox="0 0 40 35" fill="none">
+                  <path d="M5 5 C 15 20, 25 28, 35 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+                  <path d="M29 32 L 36 31 L 34 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <!-- 4. Top Right: Google Ads & Trend Research -->
+              <div class="doodle-callout top-right" data-hotspot="google">
+                <svg class="doodle-arrow arrow-tr" viewBox="0 0 40 40" fill="none">
+                  <path d="M35 5 C 25 25, 18 30, 8 35" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+                  <path d="M14 36 L 7 36 L 9 29" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+                <div class="callout-pill">
+                  <span class="doodle-pin">📊</span>
+                  <span class="doodle-text">trend research & google ads</span>
                 </div>
               </div>
-              <div class="card-info">
-                <h3>Sesuraj A</h3>
-                <p class="role-tag">Full-Stack Dev & Growth Manager</p>
-                <div class="tech-pills">
-                  <span>Full-Stack</span>
-                  <span>Meta Ads</span>
-                  <span>Google Ads</span>
-                  <span>SEO & GMB</span>
-                  <span>Automation</span>
+
+              <!-- 5. Mid Right: Technical SEO Growth -->
+              <div class="doodle-callout mid-right" data-hotspot="seo">
+                <svg class="doodle-arrow arrow-mr" viewBox="0 0 40 30" fill="none">
+                  <path d="M35 25 C 20 22, 14 15, 6 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+                  <path d="M12 6 L 5 7 L 8 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+                <div class="callout-pill">
+                  <span class="doodle-pin">📈</span>
+                  <span class="doodle-text">SEO growth & SERP rank</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Floating Micro Badges -->
-            <div class="floating-badge badge-1" data-parallax="15">
-              <div class="badge-icon"><i class="fa-solid fa-chart-line"></i></div>
-              <div class="badge-text">
-                <strong>+25%</strong>
-                <span>Conversion Boost</span>
+              <!-- 6. Bottom Right: 1:1 Strategy & Sales Calls -->
+              <div class="doodle-callout bottom-right" data-hotspot="notes">
+                <svg class="doodle-arrow arrow-br" viewBox="0 0 40 35" fill="none">
+                  <path d="M35 5 C 25 20, 18 28, 8 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+                  <path d="M14 31 L 7 31 L 9 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+                <div class="callout-pill">
+                  <span class="doodle-pin">📝</span>
+                  <span class="doodle-text">growth tracking & sales calls</span>
+                </div>
               </div>
-            </div>
 
-            <div class="floating-badge badge-2" data-parallax="-12">
-              <div class="badge-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
-              <div class="badge-text">
-                <strong>100+</strong>
-                <span>Projects Done</span>
-              </div>
-            </div>
-
-            <div class="floating-badge badge-3" data-parallax="20">
-              <div class="badge-icon"><i class="fa-solid fa-bolt"></i></div>
-              <div class="badge-text">
-                <strong>40%</strong>
-                <span>Admin Reduction</span>
+              <!-- Bottom Verified Founder Chip -->
+              <div class="powerhouse-bottom-chip">
+                <span class="founder-dot"></span>
+                <strong>Sesuraj A</strong> • 1-Person Digital Powerhouse
               </div>
             </div>
           </div>
