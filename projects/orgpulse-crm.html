@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>OrgPulse — Marketing CRM</title>
+<style>
+:root{
+  --ink:#0f172a;--muted:#64748b;--soft:#f8fafc;--line:#e2e8f0;--card:#ffffff;
+  --blue:#2563eb;--cyan:#06b6d4;--emerald:#059669;--amber:#d97706;--red:#dc2626;--purple:#7c3aed;
+  --shadow:0 18px 45px rgba(15,23,42,.08);--shadow2:0 8px 22px rgba(15,23,42,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,'Segoe UI',Arial,sans-serif;background:linear-gradient(180deg,#ffffff 0%,#f7fbff 45%,#f8fafc 100%);color:var(--ink);font-size:13px;min-height:100vh}
+a{text-decoration:none;color:inherit}.shell{max-width:1440px;margin:0 auto;padding:18px 24px 42px}.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1440px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;box-shadow:0 14px 28px rgba(37,99,235,.22)}.brand-title{font-size:18px;font-weight:900;letter-spacing:-.4px}.brand-title span{color:var(--blue)}.brand-sub{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:800;margin-top:2px}.top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;color:#475569}.dot{width:7px;height:7px;border-radius:999px;background:var(--emerald);box-shadow:0 0 0 4px rgba(5,150,105,.12);animation:pulse 1.6s infinite}@keyframes pulse{50%{opacity:.45}}
+.nav{max-width:1440px;margin:0 auto;padding:0 24px 12px;display:flex;gap:8px;overflow:auto}.nav a{white-space:nowrap;border:1px solid var(--line);background:#fff;color:#475569;padding:9px 12px;border-radius:12px;font-size:12px;font-weight:850;transition:.18s}.nav a:hover{transform:translateY(-1px);box-shadow:var(--shadow2)}.nav a.active{background:linear-gradient(135deg,var(--blue),var(--cyan));border-color:transparent;color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.22)}
+.hero{display:grid;grid-template-columns:1.55fr .9fr;gap:18px;margin-top:18px}.hero-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:before{content:'';position:absolute;inset:-120px -160px auto auto;width:360px;height:360px;background:radial-gradient(circle,rgba(37,99,235,.16),transparent 60%)}.dept-kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid #dbeafe;background:#eff6ff;color:#1d4ed8;padding:8px 11px;border-radius:999px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.7px}.hero h1{font-size:34px;line-height:1.08;letter-spacing:-1.2px;margin:15px 0 10px}.hero p{font-size:14px;color:var(--muted);line-height:1.6;max-width:760px}.quick-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.quick{background:linear-gradient(180deg,#fff,#f8fafc);border:1px solid var(--line);border-radius:18px;padding:15px;box-shadow:var(--shadow2)}.quick .lbl{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:900}.quick .val{font-size:23px;font-weight:950;letter-spacing:-.6px;margin-top:5px}.quick .sub{font-size:11px;color:var(--muted);margin-top:4px}.score-wrap{display:flex;align-items:center;gap:18px;margin-top:18px}.score-ring{--p:70;--c:var(--blue);width:112px;height:112px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--p)*1%),#e5e7eb 0);display:grid;place-items:center;position:relative}.score-ring:after{content:'';position:absolute;inset:10px;background:#fff;border-radius:50%}.score-ring strong{position:relative;z-index:1;font-size:26px;font-weight:950}.score-copy h3{font-size:14px;margin-bottom:5px}.score-copy div{color:var(--muted);line-height:1.55}.section{margin-top:22px}.section-h{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:12px}.section-title{font-size:15px;font-weight:950;letter-spacing:-.2px;display:flex;align-items:center;gap:8px}.section-title:before{content:'';width:8px;height:18px;border-radius:99px;background:linear-gradient(var(--blue),var(--cyan))}.section-note{font-size:11px;color:var(--muted);font-weight:700}.grid{display:grid;gap:14px}.kpi-grid{grid-template-columns:repeat(5,1fr)}.kpi{background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px;box-shadow:var(--shadow2);position:relative;overflow:hidden}.kpi:before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue)}.kpi.good:before{background:var(--emerald)}.kpi.watch:before{background:var(--amber)}.kpi.action:before{background:var(--red)}.kpi .label{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:950}.kpi .value{font-size:24px;font-weight:950;letter-spacing:-.6px;margin-top:6px}.kpi .target{font-size:11px;color:var(--muted);margin-top:4px}.status{display:inline-flex;align-items:center;gap:5px;margin-top:9px;font-size:10px;font-weight:950;border-radius:999px;padding:5px 9px}.status.good{background:#dcfce7;color:#166534}.status.watch{background:#fef3c7;color:#92400e}.status.action{background:#fee2e2;color:#991b1b}.status.info{background:#dbeafe;color:#1e40af}.progress{height:8px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin-top:12px}.bar{height:100%;border-radius:999px;background:var(--blue);width:0}.bar.good{background:var(--emerald)}.bar.watch{background:var(--amber)}.bar.action{background:var(--red)}
+.table-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}.table-head{padding:15px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#f8fafc);display:flex;align-items:center;justify-content:space-between;gap:14px}.table-title{font-size:13px;font-weight:950}.table-meta{font-size:11px;color:var(--muted);font-weight:700}table{width:100%;border-collapse:collapse}th{background:#f8fafc;color:#475569;font-size:10px;text-transform:uppercase;letter-spacing:.7px;text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:12px;border-bottom:1px solid #edf2f7;vertical-align:middle;font-size:12px}tr:last-child td{border-bottom:0}tr:hover td{background:#fbfdff}.r{text-align:right}.metric-name{font-weight:900}.small{font-size:11px;color:var(--muted)}.mini-pb{height:7px;background:#e2e8f0;border-radius:999px;overflow:hidden;min-width:90px}.mini-pb div{height:100%;border-radius:999px;background:var(--blue)}.mini-pb div.good{background:var(--emerald)}.mini-pb div.watch{background:var(--amber)}.mini-pb div.action{background:var(--red)}.badge{display:inline-flex;align-items:center;border-radius:999px;font-size:10px;font-weight:950;padding:4px 8px;white-space:nowrap}.badge.good{background:#dcfce7;color:#166534}.badge.watch{background:#fef3c7;color:#92400e}.badge.action{background:#fee2e2;color:#991b1b}.badge.info{background:#dbeafe;color:#1e40af}.badge.neutral{background:#f1f5f9;color:#475569}.two{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow2)}.card h3{font-size:13px;margin-bottom:12px}.action-list{display:grid;gap:10px}.action-item{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;border:1px solid #edf2f7;background:#fbfdff;border-radius:16px;padding:12px}.num{width:28px;height:28px;border-radius:10px;display:grid;place-items:center;background:#eff6ff;color:#1d4ed8;font-weight:950;font-size:12px}.action-item b{display:block;font-size:12px;margin-bottom:3px}.action-item p{color:var(--muted);line-height:1.45;font-size:11.5px}.sync-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.sync{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow2)}.sync .top{display:flex;align-items:center;gap:8px;font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:950;margin-bottom:6px}.sync p{font-size:12px;color:#334155;line-height:1.45}.formula{background:linear-gradient(135deg,#eff6ff,#ecfeff);border:1px solid #bfdbfe;border-radius:20px;padding:16px}.formula h3{color:#1d4ed8}.formula p,.formula li{font-size:12px;color:#334155;line-height:1.55}.formula ul{padding-left:18px;margin-top:8px}.footer{margin-top:24px;color:var(--muted);font-size:11px;text-align:center}.print-btn{border:0;background:var(--ink);color:#fff;border-radius:12px;padding:9px 12px;font-size:11px;font-weight:900;cursor:pointer}.print-btn:hover{opacity:.9}@media(max-width:1100px){.hero,.two{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,1fr)}.sync-grid,.three{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.shell,.topbar-in,.nav{padding-left:14px;padding-right:14px}.hero h1{font-size:26px}.kpi-grid,.sync-grid,.three,.quick-stats{grid-template-columns:1fr}.table-card{overflow:auto}.topbar-in{align-items:flex-start;flex-direction:column}.hero-card{padding:18px}}
+@media print{.topbar,.nav,.print-btn{display:none}.shell{max-width:none;padding:0}.hero,.two,.three,.sync-grid,.kpi-grid{break-inside:avoid}.table-card,.card,.hero-card,.kpi{box-shadow:none}}
+</style>
+</head>
+<body>
+<header class='topbar'>
+  <div class='topbar-in'>
+    <div class='brand'><div class='brand-mark'>OP</div><div><div class='brand-title'>Org<span>Pulse</span></div><div class='brand-sub'>Department CRM System</div></div></div>
+    <div class='top-actions'><span class='pill'><span class='dot'></span> Live CRM</span><span class='pill'>Sunday, 28 June 2026</span><span class='pill'>Q1 FY2026-27 · Week 26</span><button class='print-btn' onclick='window.print()'>Print / Save PDF</button></div>
+  </div>
+  <nav class='nav'><a class='' href='sales_revenue_crm.html'>💰 Sales & Revenue</a>
+<a class='active' href='marketing_crm.html'>📣 Marketing</a>
+<a class='' href='finance_crm.html'>📊 Finance</a>
+<a class='' href='operations_hr_crm.html'>👥 Operations & HR</a>
+<a class='' href='social_media_crm.html'>📱 Social Media</a>
+<a class='' href='customer_support_crm.html'>🎧 Customer Support</a>
+<a class='' href='data_analytics_crm.html'>🔢 Data Analytics</a>
+<a class='' href='product_engineering_crm.html'>⚙️ Product & Engineering</a></nav>
+</header>
+<main class='shell'>
+  <section class='hero'>
+    <div class='hero-card'>
+      <div class='dept-kicker'>📣 Demand Generation CRM</div>
+      <h1>Marketing CRM</h1>
+      <p>Manage campaigns, leads, MQL quality, content output, CPL, CTR, and channel contribution with direct handoff to Sales.</p>
+      <div class='score-wrap'>
+        <div class='score-ring' style='--p:58;--c:var(--red)'><strong>58</strong></div>
+        <div class='score-copy'><h3>Department Readiness Score</h3><div>Score combines daily target achievement, weekly pace, monthly progress, quarterly risk, and unresolved action items.</div></div>
+      </div>
+    </div>
+    <div class='hero-card'>
+      <div class='quick-stats'><div class='quick'><div class='lbl'>Leads Today</div><div class='val'>13</div><div class='sub'>Target 20</div></div><div class='quick'><div class='lbl'>MQLs Today</div><div class='val'>5</div><div class='sub'>Target 8</div></div><div class='quick'><div class='lbl'>CPL</div><div class='val'>₹682</div><div class='sub'>Target ≤₹650</div></div><div class='quick'><div class='lbl'>Campaigns Live</div><div class='val'>5/5</div><div class='sub'>All active</div></div></div>
+    </div>
+  </section>
+
+  <section class='section'>
+    <div class='section-h'><div class='section-title'>Daily Tracking Snapshot</div><div class='section-note'>Against today’s department targets</div></div>
+    <div class='grid kpi-grid'>
+        <div class='kpi action'>
+          <div class='label'>Leads Generated</div>
+          <div class='value'>13</div>
+          <div class='target'>Daily target: 20</div>
+          <div class='progress'><div class='bar action' style='width:65%'></div></div>
+          <span class='status action'>65% · ACTION</span>
+        </div>
+
+        <div class='kpi action'>
+          <div class='label'>MQLs Qualified</div>
+          <div class='value'>5</div>
+          <div class='target'>Daily target: 8</div>
+          <div class='progress'><div class='bar action' style='width:62%'></div></div>
+          <span class='status action'>62.5% · ACTION</span>
+        </div>
+
+        <div class='kpi watch'>
+          <div class='label'>Cost Per Lead</div>
+          <div class='value'>682</div>
+          <div class='target'>Daily target: ≤ 650</div>
+          <div class='progress'><div class='bar watch' style='width:95%'></div></div>
+          <span class='status watch'>95.3% · WATCH</span>
+        </div>
+
+        <div class='kpi action'>
+          <div class='label'>Content Published</div>
+          <div class='value'>0</div>
+          <div class='target'>Daily target: 1</div>
+          <div class='progress'><div class='bar action' style='width:0%'></div></div>
+          <span class='status action'>0% · ACTION</span>
+        </div>
+
+        <div class='kpi watch'>
+          <div class='label'>Website Visitors</div>
+          <div class='value'>423</div>
+          <div class='target'>Daily target: 500</div>
+          <div class='progress'><div class='bar watch' style='width:85%'></div></div>
+          <span class='status watch'>84.6% · WATCH</span>
+        </div></div>
+  </section>
+
+  <section class='section'>
+    <div class='section-h'><div class='section-title'>KPI Target Tracker</div><div class='section-note'>Daily · Weekly · Monthly · Quarterly progress</div></div>
+    <div class='table-card'>
+      <div class='table-head'><div class='table-title'>Marketing KPI Control Table</div><div class='table-meta'>Week: Mon 22 Jun – Sun 28 Jun · Month: Jun 2026 · Quarter: Apr–Jun 2026</div></div>
+      <table>
+        <thead><tr><th>KPI / Owner</th><th>Daily</th><th>Weekly</th><th>Monthly</th><th>Quarterly</th><th>Status & Action</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><div class='metric-name'>Leads Generated</div><div class='small'>Performance Lead</div></td>
+          <td>13<br><span class='small'>Target: 20</span><div class='mini-pb'><div class='action' style='width:65%'></div></div><div class='small'>65%</div></td>
+          <td>45<br><span class='small'>Target: 80</span><div class='mini-pb'><div class='action' style='width:56%'></div></div><div class='small'>56.2%</div></td>
+          <td>210<br><span class='small'>Target: 400</span><div class='mini-pb'><div class='action' style='width:52%'></div></div><div class='small'>52.5%</div></td>
+          <td>412<br><span class='small'>Target: 1000</span><div class='mini-pb'><div class='action' style='width:41%'></div></div><div class='small'>41.2%</div></td>
+          <td><span class='badge action'>ACTION</span><div class='small' style='margin-top:6px'>Shift budget to best channel</div></td>
+        </tr>
+
+        <tr>
+          <td><div class='metric-name'>MQLs Qualified</div><div class='small'>Marketing Ops</div></td>
+          <td>5<br><span class='small'>Target: 8</span><div class='mini-pb'><div class='action' style='width:62%'></div></div><div class='small'>62.5%</div></td>
+          <td>18<br><span class='small'>Target: 32</span><div class='mini-pb'><div class='action' style='width:56%'></div></div><div class='small'>56.2%</div></td>
+          <td>88<br><span class='small'>Target: 160</span><div class='mini-pb'><div class='action' style='width:55%'></div></div><div class='small'>55%</div></td>
+          <td>148<br><span class='small'>Target: 400</span><div class='mini-pb'><div class='action' style='width:37%'></div></div><div class='small'>37%</div></td>
+          <td><span class='badge action'>ACTION</span><div class='small' style='margin-top:6px'>Tighten lead scoring + sales SLA</div></td>
+        </tr>
+
+        <tr>
+          <td><div class='metric-name'>Cost Per Lead</div><div class='small'>Ads Manager</div></td>
+          <td>682<br><span class='small'>Target: ≤ 650</span><div class='mini-pb'><div class='watch' style='width:95%'></div></div><div class='small'>95.3%</div></td>
+          <td>670<br><span class='small'>Target: ≤ 650</span><div class='mini-pb'><div class='watch' style='width:97%'></div></div><div class='small'>97%</div></td>
+          <td>642<br><span class='small'>Target: ≤ 650</span><div class='mini-pb'><div class='good' style='width:100%'></div></div><div class='small'>101.2%</div></td>
+          <td>681<br><span class='small'>Target: ≤ 650</span><div class='mini-pb'><div class='watch' style='width:95%'></div></div><div class='small'>95.4%</div></td>
+          <td><span class='badge watch'>WATCH</span><div class='small' style='margin-top:6px'>Cut weak ad sets</div></td>
+        </tr>
+
+        <tr>
+          <td><div class='metric-name'>Content Published</div><div class='small'>Content Lead</div></td>
+          <td>0<br><span class='small'>Target: 1</span><div class='mini-pb'><div class='action' style='width:0%'></div></div><div class='small'>0%</div></td>
+          <td>11<br><span class='small'>Target: 21</span><div class='mini-pb'><div class='action' style='width:52%'></div></div><div class='small'>52.4%</div></td>
+          <td>46<br><span class='small'>Target: 90</span><div class='mini-pb'><div class='action' style='width:51%'></div></div><div class='small'>51.1%</div></td>
+          <td>164<br><span class='small'>Target: 273</span><div class='mini-pb'><div class='action' style='width:60%'></div></div><div class='small'>60.1%</div></td>
+          <td><span class='badge action'>ACTION</span><div class='small' style='margin-top:6px'>Post missed reel by today</div></td>
+        </tr>
+
+        <tr>
+          <td><div class='metric-name'>Website Visitors</div><div class='small'>Growth Team</div></td>
+          <td>423<br><span class='small'>Target: 500</span><div class='mini-pb'><div class='watch' style='width:85%'></div></div><div class='small'>84.6%</div></td>
+          <td>2820<br><span class='small'>Target: 3500</span><div class='mini-pb'><div class='watch' style='width:81%'></div></div><div class='small'>80.6%</div></td>
+          <td>11200<br><span class='small'>Target: 15000</span><div class='mini-pb'><div class='action' style='width:75%'></div></div><div class='small'>74.7%</div></td>
+          <td>38200<br><span class='small'>Target: 45000</span><div class='mini-pb'><div class='watch' style='width:85%'></div></div><div class='small'>84.9%</div></td>
+          <td><span class='badge watch'>WATCH</span><div class='small' style='margin-top:6px'>Improve landing page CTR</div></td>
+        </tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class='section two'>
+    <div class='table-card'>
+      <div class='table-head'><div class='table-title'>Marketing CRM Records</div><div class='table-meta'>Priority records for department head review</div></div>
+      <table><thead><tr><th>Campaign</th><th>Channel</th><th>Budget</th><th>Leads</th><th>CPL</th><th>Status</th><th>Next Move</th></tr></thead><tbody><tr><td><strong>Q1 SaaS Push</strong></td><td>Google Ads</td><td>₹80K</td><td>124</td><td>₹645</td><td><span class="badge good">Live</span></td><td>Keep; high intent</td></tr><tr><td><strong>Brand Awareness</strong></td><td>Meta Ads</td><td>₹60K</td><td>88</td><td>₹682</td><td><span class="badge watch">Live</span></td><td>Test new hooks</td></tr><tr><td><strong>Retargeting</strong></td><td>Meta + Google</td><td>₹40K</td><td>62</td><td>₹645</td><td><span class="badge good">Live</span></td><td>Scale 15%</td></tr><tr><td><strong>Email Nurture</strong></td><td>Email</td><td>₹8K</td><td>52</td><td>₹154</td><td><span class="badge good">Active</span></td><td>Add case-study CTA</td></tr><tr><td><strong>LinkedIn B2B</strong></td><td>LinkedIn</td><td>₹35K</td><td>34</td><td>₹1,029</td><td><span class="badge watch">Optimising</span></td><td>Narrow ICP</td></tr></tbody></table>
+    </div>
+    <div class='card'>
+      <h3>Today’s Action Queue</h3>
+      <div class='action-list'><div class='action-item'><div class='num'>1</div><div><b>Fix today’s content miss</b><p>Content is 0/1. Publish the priority reel or carousel before evening peak time.</p></div><span class='badge action'>High</span></div><div class='action-item'><div class='num'>2</div><div><b>Reduce CPL leakage</b><p>LinkedIn CPL is high. Move budget into retargeting and Google high-intent terms.</p></div><span class='badge watch'>Today</span></div><div class='action-item'><div class='num'>3</div><div><b>Improve MQL handoff</b><p>Only 5/13 leads became MQLs. Review source quality and scoring threshold.</p></div><span class='badge info'>Today</span></div></div>
+    </div>
+  </section>
+
+  <section class='section'>
+    <div class='section-h'><div class='section-title'>CRM Sync & Department Dependencies</div><div class='section-note'>How this department connects with the full company operating system</div></div>
+    <div class='sync-grid'><div class='sync'><div class='top'><span class='dot'></span>Sends</div><p>MQLs to Sales CRM every 30 minutes</p></div><div class='sync'><div class='top'><span class='dot'></span>Receives</div><p>Deal conversion data from Sales daily</p></div><div class='sync'><div class='top'><span class='dot'></span>Sends</div><p>Campaign data to Analytics hourly</p></div><div class='sync'><div class='top'><span class='dot'></span>Receives</div><p>Feature release updates from Product</p></div></div>
+  </section>
+
+  <section class='section formula'>
+    <h3>KPI Formula Notes</h3>
+    <p>Tracking is calculated as actual ÷ target for growth KPIs. For limit-based KPIs such as cost, response time, escalations, overdue AR, open roles, and new bugs, tracking is calculated as target ÷ actual so lower values score better.</p>
+    <ul>
+      <li>Daily view shows whether the department needs action today.</li>
+      <li>Weekly view shows whether the department can finish the current week on target.</li>
+      <li>Monthly and quarterly views show strategic progress and recovery gaps.</li>
+      <li>Values are structured from the uploaded CRM hub sample and should be connected to actual CRM / finance / analytics sources before live use.</li>
+    </ul>
+  </section>
+  <div class='footer'>OrgPulse Department CRM · Generated for executive tracking · Each page is standalone HTML.</div>
+</main>
+</body>
+</html>

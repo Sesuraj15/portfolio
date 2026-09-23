@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sesuraj A | Full-Stack Developer & Digital Marketing Manager</title>
+  <meta name="description" content="Official Portfolio of Sesuraj A - Full-Stack Developer, Digital Marketing Manager, SEO Specialist, and Paid Ads Strategist with 3+ years experience and 100+ delivered projects.">
+  <meta name="keywords" content="Sesuraj A, Full-Stack Developer, Digital Marketing Manager, SEO Specialist, Meta Ads, Google Ads, Karur, Portfolio, Web Developer, Marketing CRM">
+  <meta name="author" content="Sesuraj A">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Sesuraj A | Full-Stack Developer & Digital Marketing Strategist">
+  <meta property="og:description" content="Turning complex ideas into scalable, high-performing digital solutions and data-driven marketing campaigns.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/sesuraj-photo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/sesuraj-photo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Custom Magnetic Cursor Follower -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Interactive Dynamic Background Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Sticky Top Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Sesuraj Portfolio Home">
+        <div class="brand-monogram">SA</div>
+        <div class="brand-text">
+          <span class="brand-name">Sesuraj A</span>
+          <span class="brand-sub">Dev & Growth</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-layer-group"></i> Skills</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-cubes"></i> Projects</a>
+        <a href="#calculator" class="nav-link"><i class="fa-solid fa-calculator"></i> ROI Tool</a>
+        <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- LinkedIn Direct Link -->
+        <a href="https://www.linkedin.com/in/sesurajdigital/" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <!-- Instagram Direct Link -->
+        <a href="https://www.instagram.com/sesuraj_official/" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="Instagram Profile" aria-label="Instagram Profile">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <!-- Google Drive Direct Link -->
+        <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="Google Drive Projects Archive" aria-label="Google Drive">
+          <i class="fa-brands fa-google-drive"></i>
+        </a>
+        <!-- GitHub Direct Link -->
+        <a href="https://github.com/Sesuraj15" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="GitHub Profile" aria-label="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <!-- Theme Toggle -->
+        <button class="btn-theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <!-- Resume Trigger -->
+        <button class="btn-primary-glow btn-resume-nav" id="openResumeBtn">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content" data-reveal="fade-up">
+          <!-- Availability Badge -->
+          <div class="availability-badge">
+            <span class="pulse-dot"></span>
+            <span>Available for Freelance & Full-Time Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting">Hi, I'm</span>
+            <span class="gradient-name">Sesuraj A</span>
+          </h1>
+
+          <!-- Dynamic Typewriter Subtitle -->
+          <div class="hero-role-wrapper">
+            <span class="role-prefix">I am a </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-bio">
+            "Turning Complex Ideas into Scalable, High-Performing Digital Solutions."
+            Bridging <strong>software engineering precision</strong> with <strong>data-driven 360° digital marketing</strong> to build high-converting web apps, scalable CRMs, and dominant search campaigns.
+          </p>
+
+          <!-- Quick Action Buttons -->
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary-glow">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Explore Projects</span>
+            </a>
+            <button class="btn-secondary-glass" id="heroResumeBtn">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>View Resume</span>
+            </button>
+            <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-drive-glass">
+              <i class="fa-brands fa-google-drive"></i>
+              <span>Drive Archive</span>
+            </a>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <a href="https://www.linkedin.com/in/sesurajdigital/" target="_blank" rel="noopener noreferrer" class="social-pill linkedin" title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/sesuraj_official/" target="_blank" rel="noopener noreferrer" class="social-pill instagram" title="Instagram Profile"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://github.com/Sesuraj15" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://wa.me/918270514409?text=Hi%20Sesuraj,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="social-pill whatsapp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="mailto:sesuraj15af@gmail.com" class="social-pill email" title="Email"><i class="fa-solid fa-envelope"></i> Email</a>
+            <a href="http://www.sesuraj15af.wixsite.com/sesuraj-digital" target="_blank" rel="noopener noreferrer" class="social-pill wix" title="Wix Portfolio"><i class="fa-solid fa-globe"></i> Live Site</a>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Profile Avatar Card -->
+        <div class="hero-visual" data-reveal="fade-left">
+          <div class="profile-3d-card" id="profileCard">
+            <div class="card-glow-ring"></div>
+            <div class="card-inner">
+              <div class="photo-wrapper">
+                <img src="assets/sesuraj-photo.png" alt="Sesuraj A - Full Stack Developer & Digital Marketer" class="profile-img">
+                <div class="status-chip">
+                  <i class="fa-solid fa-circle-check"></i> BCA • Digital Architect
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Sesuraj A</h3>
+                <p class="role-tag">Full-Stack Dev & Growth Manager</p>
+                <div class="tech-pills">
+                  <span>Full-Stack</span>
+                  <span>Meta Ads</span>
+                  <span>Google Ads</span>
+                  <span>SEO & GMB</span>
+                  <span>Automation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Micro Badges -->
+            <div class="floating-badge badge-1" data-parallax="15">
+              <div class="badge-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="badge-text">
+                <strong>+25%</strong>
+                <span>Conversion Boost</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-2" data-parallax="-12">
+              <div class="badge-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+              <div class="badge-text">
+                <strong>100+</strong>
+                <span>Projects Done</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-3" data-parallax="20">
+              <div class="badge-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="badge-text">
+                <strong>40%</strong>
+                <span>Admin Reduction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live KPI Metrics Counter Banner -->
+      <div class="container hero-stats-container">
+        <div class="stats-card-grid">
+          <div class="stat-box" data-reveal="zoom-in" data-delay="100">
+            <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="stat-number" data-target="100">0</div>
+            <span class="stat-plus">+</span>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-box" data-reveal="zoom-in" data-delay="200">
+            <div class="stat-icon"><i class="fa-solid fa-business-time"></i></div>
+            <div class="stat-number" data-target="3">0</div>
+            <span class="stat-plus">+</span>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-box" data-reveal="zoom-in" data-delay="300">
+            <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <div class="stat-number" data-target="25">0</div>
+            <span class="stat-plus">%+</span>
+            <div class="stat-label">Lead Conversion Lift</div>
+          </div>
+          <div class="stat-box" data-reveal="zoom-in" data-delay="400">
+            <div class="stat-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="stat-number" data-target="40">0</div>
+            <span class="stat-plus">%</span>
+            <div class="stat-label">Admin Overhead Cut</div>
+          </div>
+          <div class="stat-box" data-reveal="zoom-in" data-delay="500">
+            <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="stat-number" data-target="100">0</div>
+            <span class="stat-plus">%</span>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE DRIVE & GITHUB SPOTLIGHT BANNER -->
+    <section class="spotlight-banner-section">
+      <div class="container">
+        <div class="spotlight-glass-card" data-reveal="fade-up">
+          <div class="spotlight-left">
+            <div class="spotlight-icon-cluster">
+              <div class="cluster-icon drive-icon"><i class="fa-brands fa-google-drive"></i></div>
+              <div class="cluster-icon github-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="cluster-icon spark-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            </div>
+            <div class="spotlight-text">
+              <h3>Verified Project Archives & Live Repositories</h3>
+              <p>Explore complete client marketing audits, ad copy creatives, SEO plans, case study dossiers, and software codebases directly.</p>
+            </div>
+          </div>
+          <div class="spotlight-right">
+            <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-glow">
+              <i class="fa-brands fa-google-drive"></i> Open Google Drive Hub
+            </a>
+            <a href="https://github.com/Sesuraj15" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass">
+              <i class="fa-brands fa-github"></i> Visit GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <span class="section-subtitle"><i class="fa-solid fa-sparkles"></i> Background & Vision</span>
+          <h2 class="section-title">Bridging Technical Code & Market Dominance</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel" data-reveal="fade-right">
+            <h3 class="about-heading"><i class="fa-solid fa-id-card-clip"></i> About Sesuraj</h3>
+            <p class="about-para">
+              I am a <strong>Full-Stack Software Developer & Digital Growth Specialist</strong> with over 3+ years of rigorous industry experience. With a Bachelor of Computer Applications (BCA) foundation from <strong>St. Joseph's College, Tiruchirappalli</strong>, I combine robust technical engineering with advanced digital marketing strategies.
+            </p>
+            <p class="about-para">
+              Having delivered <strong>100+ projects</strong> across custom software applications, CRM portals, dynamic websites, and multi-channel ad campaigns, I specialize in making businesses visible, automated, and highly profitable.
+            </p>
+
+            <div class="about-credentials-list">
+              <div class="cred-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Location</strong>
+                  <span>Karur, Tamil Nadu, India</span>
+                </div>
+              </div>
+              <div class="cred-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong>Degree</strong>
+                  <span>BCA (Bachelor of Computer Applications)</span>
+                </div>
+              </div>
+              <div class="cred-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <span>sesuraj15af@gmail.com</span>
+                </div>
+              </div>
+              <div class="cred-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Phone / WhatsApp</strong>
+                  <span>+91 8270514409</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Core Pillars Grid -->
+          <div class="pillars-grid" data-reveal="fade-left">
+            <div class="pillar-card glass-panel tilt-card">
+              <div class="pillar-icon-box cyan"><i class="fa-solid fa-code"></i></div>
+              <h4>Custom Web & Software Development</h4>
+              <p>Designing responsive, lightning-fast web applications, custom CRM dashboards, and business automation workflows.</p>
+            </div>
+            <div class="pillar-card glass-panel tilt-card">
+              <div class="pillar-icon-box violet"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+              <h4>Technical & Local SEO Domination</h4>
+              <p>On-page/off-page SEO, GMB map rank optimization, keyword research, and high-authority link building.</p>
+            </div>
+            <div class="pillar-card glass-panel tilt-card">
+              <div class="pillar-icon-box emerald"><i class="fa-solid fa-bullseye"></i></div>
+              <h4>Paid Advertising (Google & Meta Ads)</h4>
+              <p>ROI-focused search, shopping, display, and social ad campaigns with precise audience segmentation and A/B split testing.</p>
+            </div>
+            <div class="pillar-card glass-panel tilt-card">
+              <div class="pillar-icon-box amber"><i class="fa-solid fa-video"></i></div>
+              <h4>Creative Production & Content AI</h4>
+              <p>High-engagement short-form video editing (CapCut, Premiere Pro), Canva branding graphics, and AI prompt engineering.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabbed 4-Step Methodology -->
+        <div class="methodology-container glass-panel" data-reveal="fade-up">
+          <div class="methodology-header">
+            <h3><i class="fa-solid fa-route"></i> My 4-Step Execution Framework</h3>
+            <p>From initial vision to high-converting deployment and ongoing growth</p>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <h4>Discovery & Strategy</h4>
+              <p>Mapping out exact business requirements, target personas, competitors, and clear KPI targets.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">02</div>
+              <h4>Architecture & Development</h4>
+              <p>Building clean, scalable code and high-converting funnel architectures optimized for mobile & speed.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <h4>Rigorous Testing & QA</h4>
+              <p>Cross-browser testing, pixel validation, conversion tracking QA, and form load validation.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">04</div>
+              <h4>Launch & 360° Growth</h4>
+              <p>Seamless production rollout, search indexing, paid traffic ignition, and continuous data optimization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <span class="section-subtitle"><i class="fa-solid fa-microchip"></i> Expertise & Toolkit</span>
+          <h2 class="section-title">Technical Mastery & Marketing Arsenal</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-filter-nav" data-reveal="fade-up">
+          <button class="skill-tab-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> All Skills</button>
+          <button class="skill-tab-btn" data-filter="marketing"><i class="fa-solid fa-bullhorn"></i> Digital Marketing & Ads</button>
+          <button class="skill-tab-btn" data-filter="seo"><i class="fa-solid fa-chart-pie"></i> SEO & Analytics</button>
+          <button class="skill-tab-btn" data-filter="dev"><i class="fa-solid fa-laptop-code"></i> Software & Web Dev</button>
+          <button class="skill-tab-btn" data-filter="creative"><i class="fa-solid fa-wand-magic-sparkles"></i> Creative & AI Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Skill: Google Ads -->
+          <div class="skill-card glass-panel" data-category="marketing" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-brands fa-google"></i></div>
+              <div class="skill-meta">
+                <h4>Google Ads (PPC, Search & Shopping)</h4>
+                <span>Campaign Optimization & ROI</span>
+              </div>
+              <div class="skill-pct">95%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
+            <div class="skill-tags"><span>Search Ads</span><span>Display & Shopping</span><span>Keyword Bidding</span><span>Conversion Tracking</span></div>
+          </div>
+
+          <!-- Skill: Meta Ads -->
+          <div class="skill-card glass-panel" data-category="marketing" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-brands fa-meta"></i></div>
+              <div class="skill-meta">
+                <h4>Meta Ads (Facebook & Instagram)</h4>
+                <span>Lead Gen & Audience Retargeting</span>
+              </div>
+              <div class="skill-pct">92%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
+            <div class="skill-tags"><span>Audience Segmentation</span><span>A/B Split Testing</span><span>Pixel Setup</span><span>Lookalike Audiences</span></div>
+          </div>
+
+          <!-- Skill: SEO Optimization -->
+          <div class="skill-card glass-panel" data-category="seo" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+              <div class="skill-meta">
+                <h4>Search Engine Optimization (SEO)</h4>
+                <span>On-Page, Off-Page & Technical Audits</span>
+              </div>
+              <div class="skill-pct">94%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 94%;"></div></div>
+            <div class="skill-tags"><span>Keyword Research</span><span>Backlink Building</span><span>Schema Markup</span><span>Site Speed CRO</span></div>
+          </div>
+
+          <!-- Skill: Google Search Console & GA4 -->
+          <div class="skill-card glass-panel" data-category="seo" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="skill-meta">
+                <h4>Google Analytics 4 & Search Console</h4>
+                <span>Attribution & Performance Reporting</span>
+              </div>
+              <div class="skill-pct">90%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-tags"><span>GA4 Events</span><span>Search Queries</span><span>Indexing Fixes</span><span>UTM Attribution</span></div>
+          </div>
+
+          <!-- Skill: Google My Business -->
+          <div class="skill-card glass-panel" data-category="seo" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="skill-meta">
+                <h4>Google My Business (Local GMB SEO)</h4>
+                <span>Local Map Pack & Foot Traffic Domination</span>
+              </div>
+              <div class="skill-pct">96%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 96%;"></div></div>
+            <div class="skill-tags"><span>Map Rankings</span><span>Review Strategy</span><span>Geo-Targeting</span><span>Local Citations</span></div>
+          </div>
+
+          <!-- Skill: Full-Stack Web Development -->
+          <div class="skill-card glass-panel" data-category="dev" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="skill-meta">
+                <h4>Full-Stack Web & Software Dev</h4>
+                <span>HTML5, Modern CSS3, JavaScript & APIs</span>
+              </div>
+              <div class="skill-pct">88%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 88%;"></div></div>
+            <div class="skill-tags"><span>Custom CRMs</span><span>REST APIs</span><span>Responsive UI</span><span>DOM & Canvas</span></div>
+          </div>
+
+          <!-- Skill: WordPress & CMS -->
+          <div class="skill-card glass-panel" data-category="dev" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-brands fa-wordpress"></i></div>
+              <div class="skill-meta">
+                <h4>WordPress Design & Optimization</h4>
+                <span>High-Converting Themes & Custom Architecture</span>
+              </div>
+              <div class="skill-pct">92%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
+            <div class="skill-tags"><span>Elementor</span><span>WooCommerce</span><span>Speed Optimization</span><span>Security</span></div>
+          </div>
+
+          <!-- Skill: Software Testing & QA -->
+          <div class="skill-card glass-panel" data-category="dev" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-solid fa-bug"></i></div>
+              <div class="skill-meta">
+                <h4>Manual Testing & Quality Assurance</h4>
+                <span>Inmakes Certified Software Testing</span>
+              </div>
+              <div class="skill-pct">89%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 89%;"></div></div>
+            <div class="skill-tags"><span>Functional Testing</span><span>UI/UX QA</span><span>Bug Tracking</span><span>Cross-Browser QA</span></div>
+          </div>
+
+          <!-- Skill: Video Editing -->
+          <div class="skill-card glass-panel" data-category="creative" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-solid fa-film"></i></div>
+              <div class="skill-meta">
+                <h4>Video Editing (CapCut & Premiere Pro)</h4>
+                <span>High-Retention Short-Form & Promo Videos</span>
+              </div>
+              <div class="skill-pct">90%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+            <div class="skill-tags"><span>Reels & TikTok</span><span>CapCut Pro</span><span>Adobe Premiere</span><span>Subtitles & Effects</span></div>
+          </div>
+
+          <!-- Skill: Graphic Design & AI Content -->
+          <div class="skill-card glass-panel" data-category="creative" data-reveal="fade-up">
+            <div class="skill-top">
+              <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+              <div class="skill-meta">
+                <h4>Canva & Generative AI (ChatGPT, Gemini)</h4>
+                <span>Ad Visuals & AI Copywriting Systems</span>
+              </div>
+              <div class="skill-pct">95%</div>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
+            <div class="skill-tags"><span>Canva Pro</span><span>Prompt Engineering</span><span>Ad Creative</span><span>Content Calendars</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS & PRODUCTS SHOWCASE -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <span class="section-subtitle"><i class="fa-solid fa-folder-open"></i> Portfolio Showcase</span>
+          <h2 class="section-title">Featured Products, Campaigns & Case Studies</h2>
+          <p class="section-desc">Real-world software products and high-impact digital marketing campaigns with verified results.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filters" data-reveal="fade-up">
+          <button class="project-filter-btn active" data-pfilter="all"><i class="fa-solid fa-globe"></i> All Deliveries</button>
+          <button class="project-filter-btn" data-pfilter="product"><i class="fa-solid fa-code"></i> Developed Products</button>
+          <button class="project-filter-btn" data-pfilter="marketing"><i class="fa-solid fa-bullseye"></i> Digital Marketing & SEO</button>
+          <button class="project-filter-btn" data-pfilter="ads"><i class="fa-solid fa-rectangle-ad"></i> Paid Ads (Google & Meta)</button>
+          <button class="project-filter-btn" data-pfilter="branding"><i class="fa-solid fa-paintbrush"></i> Creative & Video</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- PROJECT 1: OrgPulse Marketing CRM (DEVELOPED PRODUCT) -->
+          <div class="project-card glass-panel tilt-card" data-pcat="product" data-reveal="fade-up">
+            <div class="project-header-badge product-badge">
+              <i class="fa-solid fa-circle-check"></i> Developed Product
+            </div>
+            <div class="project-img-container">
+              <div class="mockup-preview crm-preview">
+                <div class="crm-topbar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="crm-title">OrgPulse — Marketing CRM & Pipeline Automation</span>
+                </div>
+                <div class="crm-body-mock">
+                  <div class="mock-stat"><span>Leads</span><strong>1,420+</strong></div>
+                  <div class="mock-stat"><span>Win Rate</span><strong>34.2%</strong></div>
+                  <div class="mock-stat"><span>Revenue</span><strong>$84.5K</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-tags">
+                <span>HTML5 / JS</span>
+                <span>CRM Architecture</span>
+                <span>Lead Pipeline</span>
+                <span>Analytics</span>
+              </div>
+              <h3 class="project-title">OrgPulse — Marketing CRM & Lead Pipeline Platform</h3>
+              <p class="project-summary">
+                A custom-engineered CRM portal built to automate lead capture, pipeline tracking, campaign ROI attribution, and team onboarding without expensive SaaS overhead.
+              </p>
+              <div class="project-results">
+                <div class="res-item"><i class="fa-solid fa-arrow-trend-down"></i> -40% Admin Overhead</div>
+                <div class="res-item"><i class="fa-solid fa-arrow-trend-up"></i> +25% Lead Conversion</div>
+              </div>
+              <div class="project-actions">
+                <a href="projects/orgpulse-crm.html" target="_blank" class="btn-primary-glow btn-sm">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/Sesuraj15" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass btn-sm">
+                  <i class="fa-brands fa-github"></i> Codebase
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Solar Energy Lead Gen Campaign -->
+          <div class="project-card glass-panel tilt-card" data-pcat="ads" data-reveal="fade-up">
+            <div class="project-header-badge ads-badge">
+              <i class="fa-solid fa-sun"></i> High-Ticket PPC
+            </div>
+            <div class="project-img-container">
+              <div class="mockup-preview solar-preview">
+                <div class="solar-glow"></div>
+                <div class="mock-stat"><span>Solar Inquiries</span><strong>520+ Qualified</strong></div>
+                <div class="mock-stat"><span>Avg CPL</span><strong>-38% Cost Cut</strong></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-tags">
+                <span>Google Ads</span>
+                <span>Landing Page CRO</span>
+                <span>Lead Gen</span>
+                <span>B2B / B2C</span>
+              </div>
+              <h3 class="project-title">Solar Energy Full-Funnel Lead Generation Engine</h3>
+              <p class="project-summary">
+                Engineered high-converting Google Search and Meta Ads funnels targeting commercial and residential solar installations, paired with optimized landing pages.
+              </p>
+              <div class="project-results">
+                <div class="res-item"><i class="fa-solid fa-chart-line"></i> 3.8x ROAS Generated</div>
+                <div class="res-item"><i class="fa-solid fa-filter"></i> 90%+ Lead Qualification Rate</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-glow btn-sm">
+                  <i class="fa-brands fa-google-drive"></i> View Case Study
+                </a>
+                <button class="btn-secondary-glass btn-sm open-details-btn" data-project="solar">
+                  <i class="fa-solid fa-info-circle"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: E-Commerce Growth & Local SEO Engine -->
+          <div class="project-card glass-panel tilt-card" data-pcat="marketing" data-reveal="fade-up">
+            <div class="project-header-badge seo-badge">
+              <i class="fa-solid fa-cart-shopping"></i> E-Commerce & SEO
+            </div>
+            <div class="project-img-container">
+              <div class="mockup-preview ecom-preview">
+                <div class="mock-stat"><span>Page Speed</span><strong>1.4s (<2s)</strong></div>
+                <div class="mock-stat"><span>Organic Traffic</span><strong>+180% MoM</strong></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-tags">
+                <span>WordPress / E-Com</span>
+                <span>Technical SEO</span>
+                <span>Payment Gateways</span>
+                <span>Speed Opt</span>
+              </div>
+              <h3 class="project-title">Retail E-Commerce Platform & Organic Search Growth</h3>
+              <p class="project-summary">
+                Engineered mobile-first, sub-2-second page load e-commerce architecture integrated with local SEO schema, product structured data, and search rankings.
+              </p>
+              <div class="project-results">
+                <div class="res-item"><i class="fa-solid fa-bolt"></i> 100/100 Core Web Vitals</div>
+                <div class="res-item"><i class="fa-solid fa-dollar-sign"></i> Double-Digit Sales Growth</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-glow btn-sm">
+                  <i class="fa-brands fa-google-drive"></i> Drive Audit Dossier
+                </a>
+                <button class="btn-secondary-glass btn-sm open-details-btn" data-project="ecom">
+                  <i class="fa-solid fa-info-circle"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Dry Fruit Brand SEO Authority Engine -->
+          <div class="project-card glass-panel tilt-card" data-pcat="marketing" data-reveal="fade-up">
+            <div class="project-header-badge seo-badge">
+              <i class="fa-solid fa-seedling"></i> Organic Rank 1
+            </div>
+            <div class="project-img-container">
+              <div class="mockup-preview dryfruit-preview">
+                <div class="mock-stat"><span>Top 3 SERPs</span><strong>45+ Keywords</strong></div>
+                <div class="mock-stat"><span>CTR Lift</span><strong>+62%</strong></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-tags">
+                <span>Keyword Intelligence</span>
+                <span>On-Page Meta</span>
+                <span>Backlink Submissions</span>
+                <span>GSC Optimization</span>
+              </div>
+              <h3 class="project-title">Dry Fruits & Agro Retail Organic SEO Authority</h3>
+              <p class="project-summary">
+                Comprehensive search optimization across keyword clustering, competitor gap analysis, meta schema enhancements, and high-DA directory submissions.
+              </p>
+              <div class="project-results">
+                <div class="res-item"><i class="fa-solid fa-ranking-star"></i> First Page Dominance</div>
+                <div class="res-item"><i class="fa-solid fa-users"></i> 3.2x Organic Visitor Influx</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-glow btn-sm">
+                  <i class="fa-brands fa-google-drive"></i> SEO Strategy Docs
+                </a>
+                <button class="btn-secondary-glass btn-sm open-details-btn" data-project="seo">
+                  <i class="fa-solid fa-info-circle"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: Restaurant & Hospitality Local GMB & Geo-Ads -->
+          <div class="project-card glass-panel tilt-card" data-pcat="ads" data-reveal="fade-up">
+            <div class="project-header-badge ads-badge">
+              <i class="fa-solid fa-utensils"></i> Local GMB & Ads
+            </div>
+            <div class="project-img-container">
+              <div class="mockup-preview restaurant-preview">
+                <div class="mock-stat"><span>Map Interactions</span><strong>+240%</strong></div>
+                <div class="mock-stat"><span>Direction Requests</span><strong>1,200+/mo</strong></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-tags">
+                <span>Google My Business</span>
+                <span>Geo-Fencing</span>
+                <span>Meta Local Ads</span>
+                <span>Social Proof</span>
+              </div>
+              <h3 class="project-title">Restaurant & Hospitality Local GMB Domination</h3>
+              <p class="project-summary">
+                Targeted local SEO and geo-fenced Instagram/Facebook promotions that captured local dine-in visitors and dramatically increased weekend reservations.
+              </p>
+              <div class="project-results">
+                <div class="res-item"><i class="fa-solid fa-map-pin"></i> #1 Local Map Pack Rank</div>
+                <div class="res-item"><i class="fa-solid fa-phone-volume"></i> 4x Inbound Call Inquiries</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-glow btn-sm">
+                  <i class="fa-brands fa-google-drive"></i> Campaign Assets
+                </a>
+                <button class="btn-secondary-glass btn-sm open-details-btn" data-project="gmb">
+                  <i class="fa-solid fa-info-circle"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: Video Editing & Social Media Engine -->
+          <div class="project-card glass-panel tilt-card" data-pcat="branding" data-reveal="fade-up">
+            <div class="project-header-badge brand-badge">
+              <i class="fa-solid fa-video"></i> Video & Branding
+            </div>
+            <div class="project-img-container">
+              <div class="mockup-preview video-preview">
+                <div class="mock-stat"><span>Total Views</span><strong>850K+</strong></div>
+                <div class="mock-stat"><span>Engagement Rate</span><strong>8.4%</strong></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-tags">
+                <span>CapCut Pro</span>
+                <span>Premiere Pro</span>
+                <span>Canva Graphic</span>
+                <span>Content Calendar</span>
+              </div>
+              <h3 class="project-title">High-Retention Brand Video & Creative Engine</h3>
+              <p class="project-summary">
+                End-to-end promotional video editing, product demonstration showcases, motion graphics, and Canva visual asset creation driving viral social brand recall.
+              </p>
+              <div class="project-results">
+                <div class="res-item"><i class="fa-solid fa-play"></i> 850,000+ Organic Views</div>
+                <div class="res-item"><i class="fa-solid fa-share-nodes"></i> 5x Follower Growth</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-glow btn-sm">
+                  <i class="fa-brands fa-google-drive"></i> View Creatives
+                </a>
+                <button class="btn-secondary-glass btn-sm open-details-btn" data-project="video">
+                  <i class="fa-solid fa-info-circle"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Drive Direct Access Action Footer -->
+        <div class="projects-footer-cta glass-panel" data-reveal="fade-up">
+          <div class="cta-text">
+            <h3>Looking for raw ad campaign reports, spreadsheets, or design assets?</h3>
+            <p>Access the full raw project repository on Google Drive including 90-day growth plans, ad sets, and client presentations.</p>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-drive-cta">
+            <i class="fa-brands fa-google-drive"></i> Launch Google Drive Archive
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE MARKETING ROI CALCULATOR -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <span class="section-subtitle"><i class="fa-solid fa-chart-line"></i> Interactive Simulation Tool</span>
+          <h2 class="section-title">Digital Marketing & SEO ROI Estimator</h2>
+          <p class="section-desc">Simulate the projected revenue, leads, and conversion lift possible with tailored digital marketing and optimization.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="calc-grid glass-panel" data-reveal="zoom-in">
+          <!-- Inputs Column -->
+          <div class="calc-controls">
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="monthlyBudget"><i class="fa-solid fa-money-bill-wave"></i> Monthly Marketing Budget (₹ / $)</label>
+                <span class="calc-val-display" id="budgetDisplay">₹ 25,000</span>
+              </div>
+              <input type="range" id="monthlyBudget" min="5000" max="200000" step="2500" value="25000" class="calc-slider">
+              <div class="slider-ticks"><span>₹5K</span><span>₹50K</span><span>₹100K</span><span>₹200K</span></div>
+            </div>
+
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="monthlyTraffic"><i class="fa-solid fa-users"></i> Estimated Monthly Website Traffic</label>
+                <span class="calc-val-display" id="trafficDisplay">5,000 Visitors</span>
+              </div>
+              <input type="range" id="monthlyTraffic" min="500" max="50000" step="500" value="5000" class="calc-slider">
+              <div class="slider-ticks"><span>500</span><span>10K</span><span>25K</span><span>50K</span></div>
+            </div>
+
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="dealValue"><i class="fa-solid fa-tag"></i> Average Customer / Deal Value (₹)</label>
+                <span class="calc-val-display" id="dealDisplay">₹ 10,000</span>
+              </div>
+              <input type="range" id="dealValue" min="1000" max="100000" step="1000" value="10000" class="calc-slider">
+              <div class="slider-ticks"><span>₹1K</span><span>₹25K</span><span>₹50K</span><span>₹100K</span></div>
+            </div>
+
+            <div class="calc-tip">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Calculations leverage Sesuraj's average industry conversion optimization benchmark (+25% CRO lift).</span>
+            </div>
+          </div>
+
+          <!-- Outputs Column -->
+          <div class="calc-outputs">
+            <div class="roi-score-box">
+              <span class="roi-sub">Projected Return on Investment</span>
+              <div class="roi-big-number" id="roiMultiplier">4.2x</div>
+              <div class="roi-badge"><i class="fa-solid fa-fire"></i> High Yield Strategy</div>
+            </div>
+
+            <div class="calc-kpi-grid">
+              <div class="calc-kpi-box">
+                <span>Estimated Monthly Leads</span>
+                <strong id="calcLeads">125 Leads</strong>
+              </div>
+              <div class="calc-kpi-box">
+                <span>Projected Closed Deals</span>
+                <strong id="calcDeals">18 Deals</strong>
+              </div>
+              <div class="calc-kpi-box">
+                <span>Projected Monthly Revenue</span>
+                <strong id="calcRevenue" class="text-gradient">₹ 1,80,000</strong>
+              </div>
+              <div class="calc-kpi-box">
+                <span>Net Projected ROI</span>
+                <strong id="calcNetProfit">+620%</strong>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn-primary-glow btn-full">
+              <i class="fa-solid fa-calendar-check"></i> Book a Growth Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER & EDUCATION TIMELINE -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <span class="section-subtitle"><i class="fa-solid fa-timeline"></i> Track Record</span>
+          <h2 class="section-title">Experience & Career Milestone Journey</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- Item 1: Currently Freelancing -->
+          <div class="timeline-item left" data-reveal="fade-right">
+            <div class="timeline-dot current-active"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="timeline-card glass-panel current-freelance-card">
+              <div class="timeline-header-row">
+                <div class="timeline-date"><i class="fa-regular fa-calendar-check"></i> Nov 2024 — Present (Currently Active)</div>
+                <span class="live-freelance-pill"><span class="pulse-dot"></span> Currently Freelancing</span>
+              </div>
+              <h3 class="timeline-role">Full-Stack Developer & Digital Growth Consultant</h3>
+              <h4 class="timeline-company"><i class="fa-solid fa-earth-americas"></i> Freelance & Independent Practice • Global & Remote</h4>
+              
+              <p class="timeline-summary-text">
+                Currently taking on freelance contracts and dedicated client projects, delivering custom web apps, automation systems, and high-ROI digital marketing solutions.
+              </p>
+
+              <ul class="timeline-bullets">
+                <li><strong>Custom Software & CRM Development:</strong> Designing and deploying tailored business automation portals (e.g. OrgPulse CRM) cutting client administrative overhead by up to 40%.</li>
+                <li><strong>Full-Funnel Paid Advertising:</strong> Managing and scaling high-converting Google Search, Shopping, and Meta Ads (Facebook & Instagram) with ROI-driven audience segmentation.</li>
+                <li><strong>360° SEO & GMB Domination:</strong> Executing on-page/off-page SEO and Google My Business map pack optimization for IT, Solar, Retail, and Hospitality clients.</li>
+                <li><strong>High-Retention Creative Production:</strong> Editing promotional video content (CapCut & Premiere Pro) and designing high-CTR Canva ad visuals.</li>
+                <li><strong>100+ Deliveries:</strong> Maintained a 100% on-time project completion and client satisfaction track record.</li>
+              </ul>
+
+              <div class="timeline-action-row">
+                <a href="#contact" class="btn-primary-glow btn-sm">
+                  <i class="fa-solid fa-paper-plane"></i> Hire Me for Freelance
+                </a>
+                <a href="https://wa.me/918270514409?text=Hi%20Sesuraj,%20I%20would%20like%20to%20hire%20you%20for%20a%20freelance%20project!" target="_blank" rel="noopener noreferrer" class="btn-secondary-glass btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Quick Chat
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Weber Tech -->
+          <div class="timeline-item right" data-reveal="fade-left">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-date"><i class="fa-regular fa-calendar-check"></i> Oct 2023 — Nov 2024</div>
+              <h3 class="timeline-role">Digital Marketing Analyst</h3>
+              <h4 class="timeline-company"><i class="fa-solid fa-building"></i> Weber Tech Website Design Agency, Karur</h4>
+              <ul class="timeline-bullets">
+                <li>Spearheaded on-page, off-page, and technical SEO for clients in solar, dry fruits, and industrial retail.</li>
+                <li>Managed targeted Google Ads (Search, Display, Shopping) and Meta Ads with continuous A/B testing.</li>
+                <li>Produced engaging video content (Adobe Premiere Pro & CapCut) and branded social media posters (Canva).</li>
+                <li>Monitored multi-client analytics via Google Search Console and GA4, presenting bi-weekly growth reports.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 3: Inmakes Infotech -->
+          <div class="timeline-item left" data-reveal="fade-right">
+            <div class="timeline-dot"><i class="fa-solid fa-user-gear"></i></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-date"><i class="fa-regular fa-calendar-check"></i> Sep 2022 — Jan 2023</div>
+              <h3 class="timeline-role">Digital Marketing & Software QA Intern</h3>
+              <h4 class="timeline-company"><i class="fa-solid fa-building-wheat"></i> Inmakes Info Tech Pvt. Ltd, Kochi</h4>
+              <ul class="timeline-bullets">
+                <li>Gained hands-on proficiency in Meta Ads setup, Google Ads management, and keyword search volume analysis.</li>
+                <li>Performed manual software testing, test case creation, and cross-browser regression validation.</li>
+                <li>Completed formal certification courses in Digital Marketing and Software Testing with distinction.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 4: Education -->
+          <div class="timeline-item right" data-reveal="fade-left">
+            <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-date"><i class="fa-regular fa-calendar-check"></i> 2017 — 2020</div>
+              <h3 class="timeline-role">BCA — Bachelor of Computer Applications</h3>
+              <h4 class="timeline-company"><i class="fa-solid fa-university"></i> St. Joseph's College, Tiruchirappalli (75.2%)</h4>
+              <p class="timeline-desc">
+                Graduated with 75.2% score. Built comprehensive foundation in software development, data structures, web technologies, and database architecture.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VERIFIED CERTIFICATIONS -->
+    <section class="cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <span class="section-subtitle"><i class="fa-solid fa-certificate"></i> Verified Badges</span>
+          <h2 class="section-title">Certifications & Accreditations</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="certs-grid">
+          <div class="cert-card glass-panel" data-reveal="zoom-in" data-delay="100">
+            <div class="cert-icon-badge"><i class="fa-solid fa-award"></i></div>
+            <h4>Digital Marketing Intern & Course</h4>
+            <span class="cert-issuer">Inmakes Info Tech Pvt Ltd, Kochi</span>
+            <span class="cert-date">Sep 2022 - Dec 2022</span>
+            <div class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+
+          <div class="cert-card glass-panel" data-reveal="zoom-in" data-delay="200">
+            <div class="cert-icon-badge"><i class="fa-solid fa-bug"></i></div>
+            <h4>Software Testing Intern & Course</h4>
+            <span class="cert-issuer">Inmakes Info Tech Pvt Ltd, Kochi</span>
+            <span class="cert-date">Sep 2022 - Jan 2023</span>
+            <div class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+
+          <div class="cert-card glass-panel" data-reveal="zoom-in" data-delay="300">
+            <div class="cert-icon-badge"><i class="fa-solid fa-chart-line"></i></div>
+            <h4>Advanced SEO Certification</h4>
+            <span class="cert-issuer">Simplilearn SkillUp</span>
+            <span class="cert-date">Jul 04, 2024</span>
+            <div class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+
+          <div class="cert-card glass-panel" data-reveal="zoom-in" data-delay="400">
+            <div class="cert-icon-badge"><i class="fa-brands fa-facebook"></i></div>
+            <h4>Facebook Marketing & Advertising</h4>
+            <span class="cert-issuer">Simplilearn SkillUp</span>
+            <span class="cert-date">Apr 19, 2024</span>
+            <div class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+
+          <div class="cert-card glass-panel" data-reveal="zoom-in" data-delay="500">
+            <div class="cert-icon-badge"><i class="fa-brands fa-instagram"></i></div>
+            <h4>Instagram Marketing From Scratch</h4>
+            <span class="cert-issuer">Lectera</span>
+            <span class="cert-date">May 11, 2023</span>
+            <div class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+
+          <div class="cert-card glass-panel" data-reveal="zoom-in" data-delay="600">
+            <div class="cert-icon-badge"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Performance Marketing Assessment</h4>
+            <span class="cert-issuer">LearnTube by CareerNinja</span>
+            <span class="cert-date">Oct 12, 2024</span>
+            <div class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & HIRE ME SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <span class="section-subtitle"><i class="fa-solid fa-handshake"></i> Let's Collaborate</span>
+          <h2 class="section-title">Ready to Elevate Your Digital Growth?</h2>
+          <p class="section-desc">Have a software project, website, or marketing campaign you'd like to scale? Let's connect.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col" data-reveal="fade-right">
+            
+            <a href="https://wa.me/918270514409?text=Hello%20Sesuraj,%20I%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel whatsapp-card">
+              <div class="contact-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="contact-text">
+                <span class="contact-sub">Instant Chat on WhatsApp</span>
+                <strong>+91 8270514409</strong>
+              </div>
+              <div class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <div class="contact-card glass-panel copyable-item" id="copyEmailCard" data-copy="sesuraj15af@gmail.com">
+              <div class="contact-icon email"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <span class="contact-sub">Email Address (Click to Copy)</span>
+                <strong>sesuraj15af@gmail.com</strong>
+              </div>
+              <div class="contact-arrow" title="Copy Email"><i class="fa-regular fa-copy"></i></div>
+            </div>
+
+            <a href="https://www.linkedin.com/in/sesurajdigital/" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel linkedin-card">
+              <div class="contact-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="contact-text">
+                <span class="contact-sub">LinkedIn Professional Profile</span>
+                <strong>linkedin.com/in/sesurajdigital</strong>
+              </div>
+              <div class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://www.instagram.com/sesuraj_official/" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel instagram-card">
+              <div class="contact-icon instagram"><i class="fa-brands fa-instagram"></i></div>
+              <div class="contact-text">
+                <span class="contact-sub">Instagram Official Profile</span>
+                <strong>@sesuraj_official</strong>
+              </div>
+              <div class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://github.com/Sesuraj15" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel github-card">
+              <div class="contact-icon github"><i class="fa-brands fa-github"></i></div>
+              <div class="contact-text">
+                <span class="contact-sub">GitHub Developer Profile</span>
+                <strong>github.com/Sesuraj15</strong>
+              </div>
+              <div class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel drive-card">
+              <div class="contact-icon drive"><i class="fa-brands fa-google-drive"></i></div>
+              <div class="contact-text">
+                <span class="contact-sub">Google Drive Project Repository</span>
+                <strong>Digital Marketing & Portfolio Archive</strong>
+              </div>
+              <div class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon location"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">
+                <span class="contact-sub">Location & Base</span>
+                <strong>2/51A, P Udayapatty post, Kadavur, Karur Dt - 639119</strong>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-col glass-panel" data-reveal="fade-left">
+            <form id="contactForm" class="contact-form">
+              <h3 class="form-title"><i class="fa-solid fa-paper-plane"></i> Send Direct Message</h3>
+              <div class="form-group">
+                <label for="formName">Your Name</label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="formName" required placeholder="e.g. Alex Henderson">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="formEmail">Your Email</label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-envelope"></i>
+                  <input type="email" id="formEmail" required placeholder="alex@company.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="formService">Interested Service / Project Type</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-sliders"></i>
+                  <select id="formService">
+                    <option value="Full-Stack Web & Software Dev">Full-Stack Web & Software Dev</option>
+                    <option value="Paid Ads Management (Meta & Google)">Paid Ads Management (Meta & Google)</option>
+                    <option value="SEO & GMB Local Optimization">SEO & GMB Local Optimization</option>
+                    <option value="Custom CRM & Lead Automation">Custom CRM & Lead Automation</option>
+                    <option value="Short Video Editing & Social Branding">Short Video Editing & Social Branding</option>
+                    <option value="Full-Time Hiring & Consultation">Full-Time Hiring & Consultation</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage">Project Details / Goals</label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa-regular fa-comment-dots"></i>
+                  <textarea id="formMessage" rows="4" required placeholder="Tell me about your project, current metrics, and timeline..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary-glow btn-full" id="submitFormBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <div class="brand-monogram">SA</div>
+          <span>Sesuraj A</span>
+        </div>
+        <p>Full-Stack Developer & Digital Marketing Manager based in Karur, India.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer">Drive Archive</a>
+        <a href="https://github.com/Sesuraj15" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/sesurajdigital/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/sesuraj_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social-icons">
+          <a href="https://www.linkedin.com/in/sesurajdigital/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/sesuraj_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/Sesuraj15" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://wa.me/918270514409" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:sesuraj15af@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://drive.google.com/drive/folders/1G2bg3hbl9Kt5YbzDdq_zq3basdsOIg4C?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Google Drive"><i class="fa-brands fa-google-drive"></i></a>
+        </div>
+        <div class="copyright">
+          © <span id="currentYear">2026</span> Sesuraj A. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL & VIEWER -->
+  <div class="modal-backdrop" id="resumeModal">
+    <div class="modal-box glass-panel modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-file-pdf"></i>
+          <h3>Sesuraj A — Official Resume</h3>
+        </div>
+        <div class="modal-header-actions">
+          <a href="assets/Sesuraj A.pdf" download="Sesuraj_A_Resume.pdf" class="btn-primary-glow btn-sm">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+          <button class="btn-modal-close" id="closeResumeModal" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="resume-preview-container">
+          <iframe src="assets/Sesuraj A.pdf" class="resume-iframe" title="Sesuraj A Resume PDF"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div class="modal-backdrop" id="projectDetailsModal">
+    <div class="modal-box glass-panel modal-md">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-cubes"></i>
+          <h3 id="modalProjectTitle">Project Details</h3>
+        </div>
+        <button class="btn-modal-close" id="closeProjectModal" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modalProjectContent">
+        <!-- Dynamic content injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING QUICK ACTIONS -->
+  <div class="floating-quick-bar">
+    <a href="https://wa.me/918270514409?text=Hi%20Sesuraj,%20I'm%20viewing%20your%20portfolio%20and%20would%20like%20to%20chat!" target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp-float" title="Chat on WhatsApp" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="floating-btn back-to-top" id="backToTopBtn" title="Back to top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+    <div class="toast-message" id="toastMessage">Action completed!</div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
